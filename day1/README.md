@@ -183,3 +183,75 @@ hii this is ashutoshh
     3  sudo yum install terraform
 
 ```
+
+### aws auth methods 
+
+<img src="auth.png">
+
+
+### terraform init 
+
+```
+terraform  init  
+Initializing the backend...
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "6.19.0"...
+- Installing hashicorp/aws v6.19.0...
+
+
+- Installed hashicorp/aws v6.19.0 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+```
+
+### terraform plan 
+
+```
+
+```
+
+### terraform apply 
+
+```
+terraform apply 
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with
+the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be created
+  + resource "aws_instance" "example" {
+      + ami                                  = "ami-0a25a306450a2cba3"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+```
+
+### terraform destroy 
+
+```
+ terraform  destroy 
+aws_instance.example: Refreshing state... [id=i-02dd2e9a69b636219]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be destroyed
+```
